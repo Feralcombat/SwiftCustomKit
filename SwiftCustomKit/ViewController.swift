@@ -30,9 +30,13 @@ class ViewController: UIViewController {
     }
 
     @objc private func button_pressed(_ sender: UIButton){
-        let vc = ZLDrawerViewController()
-        self.present(vc, animated: true, completion: nil)
+//        let vc = ZLDrawerViewController()
+//        self.present(vc, animated: true, completion: nil)
         
+        let vc = ZLActionSheetViewController()
+        vc.delegate = self as ZLActionSheetViewControllerDelegate
+        self.present(vc, animated: true, completion: nil)
+
 //        let vc = ZLPickerViewController()
 //        vc.dataSource = self as ZLPickerViewControllerDataSource
 //        vc.delegate = self as ZLPickerViewControllerDelegate
@@ -46,24 +50,24 @@ class ViewController: UIViewController {
 
 
 }
-//
-//extension ViewController : BZTActionSheetViewControllerDelegate{
-//    func numberOfRows(actionSheetViewController: BZTActionSheetViewController) -> Int {
-//        return 1
-//    }
-//
-//    func actionSheetViewController(actionSheetViewController: BZTActionSheetViewController, titleForRow: Int) -> String {
-//        return "测试"
-//    }
-//
-//    func actionSheetViewController(actionSheetViewController: BZTActionSheetViewController, didSelectRowAtIndex: Int) {
-//
-//    }
-//
-//    func actionSheetViewController(actionSheetViewController: BZTActionSheetViewController, allowSelectRowAtIndex: Int) -> Bool {
-//        return true
-//    }
-//}
+
+extension ViewController : ZLActionSheetViewControllerDelegate{
+    func numberOfRows(actionSheetViewController: ZLActionSheetViewController) -> Int {
+        return 1
+    }
+
+    func actionSheetViewController(actionSheetViewController: ZLActionSheetViewController, titleForRow: Int) -> String {
+        return "测试"
+    }
+
+    func actionSheetViewController(actionSheetViewController: ZLActionSheetViewController, didSelectRowAtIndex: Int) {
+
+    }
+
+    func actionSheetViewController(actionSheetViewController: ZLActionSheetViewController, allowSelectRowAtIndex: Int) -> Bool {
+        return true
+    }
+}
 
 extension ViewController : ZLPickerViewControllerDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

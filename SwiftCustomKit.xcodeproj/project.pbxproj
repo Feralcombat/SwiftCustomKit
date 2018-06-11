@@ -22,6 +22,8 @@
 		282D8C6E20CA7C6E006F8BE9 /* ZLImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D8C6D20CA7C6E006F8BE9 /* ZLImagePickerViewController.swift */; };
 		282D8C7120CA7D09006F8BE9 /* ZLPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D8C7020CA7D09006F8BE9 /* ZLPickerViewController.swift */; };
 		282D8C7320CA7D83006F8BE9 /* TipConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282D8C7220CA7D83006F8BE9 /* TipConfig.swift */; };
+		28891CFA20CE61AC00A2C4C5 /* ZLActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28891CF920CE61AC00A2C4C5 /* ZLActionSheetViewController.swift */; };
+		28891CFC20CE62E000A2C4C5 /* ZLActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28891CFB20CE62E000A2C4C5 /* ZLActionSheetTableViewCell.swift */; };
 		8FAC4FA55E260D972121958A /* Pods_SwiftCustomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2748CF03839506D5D20C397 /* Pods_SwiftCustomKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		282D8C6D20CA7C6E006F8BE9 /* ZLImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLImagePickerViewController.swift; sourceTree = "<group>"; };
 		282D8C7020CA7D09006F8BE9 /* ZLPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLPickerViewController.swift; sourceTree = "<group>"; };
 		282D8C7220CA7D83006F8BE9 /* TipConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipConfig.swift; sourceTree = "<group>"; };
+		28891CF920CE61AC00A2C4C5 /* ZLActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLActionSheetViewController.swift; sourceTree = "<group>"; };
+		28891CFB20CE62E000A2C4C5 /* ZLActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLActionSheetTableViewCell.swift; sourceTree = "<group>"; };
 		2C1DA60C98B5B65F28D44A5B /* Pods-SwiftCustomKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCustomKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCustomKit/Pods-SwiftCustomKit.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0E32182A6A5BCA8E85A49E /* Pods-SwiftCustomKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftCustomKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftCustomKit/Pods-SwiftCustomKit.release.xcconfig"; sourceTree = "<group>"; };
 		A2748CF03839506D5D20C397 /* Pods_SwiftCustomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftCustomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +167,8 @@
 		282D8C6920CA7C05006F8BE9 /* ZLActionSheetViewController */ = {
 			isa = PBXGroup;
 			children = (
+				28891CFB20CE62E000A2C4C5 /* ZLActionSheetTableViewCell.swift */,
+				28891CF920CE61AC00A2C4C5 /* ZLActionSheetViewController.swift */,
 			);
 			path = ZLActionSheetViewController;
 			sourceTree = "<group>";
@@ -346,9 +352,11 @@
 				282D8C5620CA6DFA006F8BE9 /* UIColorExtension.swift in Sources */,
 				282D8C7120CA7D09006F8BE9 /* ZLPickerViewController.swift in Sources */,
 				282D8C6C20CA7C3B006F8BE9 /* ZLMoviePlayerViewController.swift in Sources */,
+				28891CFA20CE61AC00A2C4C5 /* ZLActionSheetViewController.swift in Sources */,
 				282D8C6220CA74C8006F8BE9 /* ZLDrawerViewController.swift in Sources */,
 				282D8C5720CA6DFA006F8BE9 /* UIViewControllerExtension.swift in Sources */,
 				282D8C6E20CA7C6E006F8BE9 /* ZLImagePickerViewController.swift in Sources */,
+				28891CFC20CE62E000A2C4C5 /* ZLActionSheetTableViewCell.swift in Sources */,
 				282D8C6420CA751B006F8BE9 /* ZLDrawerTransition.swift in Sources */,
 				282D8C7320CA7D83006F8BE9 /* TipConfig.swift in Sources */,
 				282D8C1A20CA6D79006F8BE9 /* ViewController.swift in Sources */,

@@ -141,22 +141,11 @@ extension ZLPickerViewController : UIViewControllerAnimatedTransitioning{
             let toVC : ZLPickerViewController = transitionContext.viewController(forKey: .to) as! ZLPickerViewController
             let containerView : UIView = transitionContext.containerView
             let toView : UIView = toVC.view
-//            let fromVC : UIViewController = transitionContext.viewController(forKey: .from)!
-//            let fromView : UIView = fromVC.view
-//            containerView.addSubview(fromView)
             containerView.addSubview(toView)
 
             self.confirmShowAnimation(transitionContext)
         }
         else{
-//            let toVC : UIViewController = transitionContext.viewController(forKey: .to)!
-//            let fromVC : ZLPickerViewController = transitionContext.viewController(forKey: .from) as! ZLPickerViewController
-//            let containerView : UIView = transitionContext.containerView
-//            let toView : UIView = toVC.view
-//            let fromView : UIView = fromVC.view
-//            containerView.addSubview(toView)
-//            containerView.bringSubview(toFront: fromView)
-            
             self.confirmDismissAnimation(transitionContext)
         }
     }
@@ -179,7 +168,7 @@ extension ZLPickerViewController : UIViewControllerAnimatedTransitioning{
             self?.toolView.frame = CGRect(x: 0, y: DeviceHeight(), width: DeviceWidth(), height: 44)
             self?.pickerView.frame = CGRect(x: 0, y: DeviceHeight() + 44, width: DeviceWidth(), height: 220)
             self?.view.backgroundColor = UIColor.clear
-        }) {[weak self] (finish) in
+        }) { (finish) in
             transitionContext.completeTransition(true)
         }
     }
