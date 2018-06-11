@@ -36,12 +36,10 @@ class ZLDrawerTransition: NSObject ,UIViewControllerAnimatedTransitioning, UIVie
         else{
             let toVC : UIViewController = transitionContext.viewController(forKey: .to)!
             let fromVC : ZLDrawerViewController = transitionContext.viewController(forKey: .from) as! ZLDrawerViewController
-            let containerView : UIView = transitionContext.containerView
-            let toView : UIView = toVC.view
             let contentView = fromVC.contentView
             let fromView : UIView = fromVC.view
-            containerView.addSubview(toView)
-            containerView.bringSubview(toFront: fromView)
+//            containerView.addSubview(toView)
+//            containerView.bringSubview(toFront: fromView)
             
             UIView.setAnimationCurve(.easeInOut)
             UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {

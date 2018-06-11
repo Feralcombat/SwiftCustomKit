@@ -31,7 +31,7 @@ class ZLPickerViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        self.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+        self.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -149,13 +149,13 @@ extension ZLPickerViewController : UIViewControllerAnimatedTransitioning{
             self.confirmShowAnimation(transitionContext)
         }
         else{
-            let toVC : UIViewController = transitionContext.viewController(forKey: .to)!
-            let fromVC : ZLPickerViewController = transitionContext.viewController(forKey: .from) as! ZLPickerViewController
-            let containerView : UIView = transitionContext.containerView
-            let toView : UIView = toVC.view
-            let fromView : UIView = fromVC.view
-            containerView.addSubview(toView)
-            containerView.bringSubview(toFront: fromView)
+//            let toVC : UIViewController = transitionContext.viewController(forKey: .to)!
+//            let fromVC : ZLPickerViewController = transitionContext.viewController(forKey: .from) as! ZLPickerViewController
+//            let containerView : UIView = transitionContext.containerView
+//            let toView : UIView = toVC.view
+//            let fromView : UIView = fromVC.view
+//            containerView.addSubview(toView)
+//            containerView.bringSubview(toFront: fromView)
             
             self.confirmDismissAnimation(transitionContext)
         }
@@ -179,7 +179,7 @@ extension ZLPickerViewController : UIViewControllerAnimatedTransitioning{
             self?.toolView.frame = CGRect(x: 0, y: DeviceHeight(), width: DeviceWidth(), height: 44)
             self?.pickerView.frame = CGRect(x: 0, y: DeviceHeight() + 44, width: DeviceWidth(), height: 220)
             self?.view.backgroundColor = UIColor.clear
-        }) { (finish) in
+        }) {[weak self] (finish) in
             transitionContext.completeTransition(true)
         }
     }

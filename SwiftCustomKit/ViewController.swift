@@ -30,13 +30,13 @@ class ViewController: UIViewController {
     }
 
     @objc private func button_pressed(_ sender: UIButton){
-//        let vc = ZLDrawerViewController()
-//        self.present(vc, animated: true, completion: nil)
-        
-        let vc = ZLPickerViewController()
-        vc.dataSource = self as ZLPickerViewControllerDataSource
-        vc.delegate = self as ZLPickerViewControllerDelegate
+        let vc = ZLDrawerViewController()
         self.present(vc, animated: true, completion: nil)
+        
+//        let vc = ZLPickerViewController()
+//        vc.dataSource = self as ZLPickerViewControllerDataSource
+//        vc.delegate = self as ZLPickerViewControllerDelegate
+//        self.present(vc, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {

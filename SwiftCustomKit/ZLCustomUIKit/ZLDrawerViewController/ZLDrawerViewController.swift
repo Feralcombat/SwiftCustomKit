@@ -16,7 +16,7 @@ class ZLDrawerViewController: UIViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.modalPresentationStyle = UIModalPresentationStyle.custom
+        self.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
     }
     
     required init(coder aDecoder: NSCoder) {
