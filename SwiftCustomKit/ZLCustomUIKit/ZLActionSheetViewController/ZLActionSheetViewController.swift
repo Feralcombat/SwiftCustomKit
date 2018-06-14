@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ZLActionSheetViewControllerDelegate {
+@objc protocol ZLActionSheetViewControllerDelegate {
     func numberOfRows(actionSheetViewController : ZLActionSheetViewController) -> Int
     func actionSheetViewController(actionSheetViewController : ZLActionSheetViewController, titleForRow : Int) -> String
     func actionSheetViewController(actionSheetViewController : ZLActionSheetViewController, didSelectRowAtIndex : Int)
@@ -17,9 +17,9 @@ protocol ZLActionSheetViewControllerDelegate {
 
 class ZLActionSheetViewController: UIViewController {
 
-    public var tag : Int! = 0
-    public var maxRow : Int! = 5
-    public var delegate : ZLActionSheetViewControllerDelegate!
+    var tag : Int! = 0
+    var maxRow : Int! = 5
+    weak var delegate : ZLActionSheetViewControllerDelegate!
     
     private var rows : Int! = 0
     private var isPresent : Bool = false
@@ -70,7 +70,7 @@ class ZLActionSheetViewController: UIViewController {
         self.bottomView.backgroundColor = UIColor.colorWithHexString("#F5F5F5")
         
         self.cancelButton.frame = CGRect(x: 0, y: 12, width: DeviceWidth(), height: 44)
-        self.cancelButton.setTitle("取消", for: .normal)
+        self.cancelButton.setTitle(TipConfig.ZLCancelBrief, for: .normal)
         self.cancelButton.setTitleColor(UIColor.colorWithHexString("#BDBDBD"), for: .normal)
         self.cancelButton.backgroundColor = UIColor.white
         self.cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)

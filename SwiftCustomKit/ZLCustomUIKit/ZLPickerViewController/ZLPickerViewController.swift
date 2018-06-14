@@ -17,11 +17,11 @@ protocol ZLPickerViewControllerDelegate : UIPickerViewDelegate {
 }
 
 class ZLPickerViewController: UIViewController {
-    public final var defaultColor : UIColor! = UIColor.colorWithHexString("#66B8FF")
-    public final var defaultRow : Int! = 0
-    public final var defaultComponent : Int! = 0
-    public final var dataSource : ZLPickerViewControllerDataSource!
-    public final var delegate : ZLPickerViewControllerDelegate!
+    final var defaultColor : UIColor! = UIColor.colorWithHexString("#66B8FF")
+    final var defaultRow : Int! = 0
+    final var defaultComponent : Int! = 0
+    weak final var dataSource : ZLPickerViewControllerDataSource!
+    weak final var delegate : ZLPickerViewControllerDelegate!
     
     var isPresent : Bool = false
     private let toolView : UIView = UIView(frame: CGRect(x: 0, y: DeviceHeight(), width: DeviceWidth(), height: 44))
